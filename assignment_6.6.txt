@@ -1,0 +1,59 @@
+1.Explain the difference between FIFO and Capacity scheduler.
+
+      The differences between FIFO and capacity scheduler are:        
+
+          *FIFO is First In First Out. The job which enters the queue first is executed first.          
+
+          * In FIFO scheduling if the oldest job is long then the shortest jobs get stuck behind the longest ones.
+
+          * In FIFO scheduling the jobs are taken from the work queue. The jobs are taken in the order of the 
+            oldest job first. 
+
+          * In FIFO there is a poor utilization of the job queue and it has costly data replication.
+
+          * Whereas in the capacity scheduling several queues are created with each having a number of map
+             and reduce tasks.
+
+          * FIFO scheduling does not deals with  the size or priority of the job.
+
+          * Unlike FIFO the shortest jobs are assigned first and then the longest one.
+
+          *  Capacity scheduler  supports multiple queues. In this each queue is assigned a capacity.
+           
+          * The capacity of the individual queue is then added together to find the overall capacity of the cluster.
+
+          * Free resources can be allocated to queues beyond its capacity.
+          
+          * Jobs with higher priorities have more access compared to lower priority jobs in capacity scheduler.
+
+
+
+2.What are the limitations of hadoop 1.x and how they were overcome in hadoop 2.x
+
+       The limitations of hadoop 1.x are given as follows:
+
+          * The major limitation of hadoop 1.x is that it supports only the map reduce based on batch and 
+            data processing.
+
+          * Hadoop 1.x does not support horizontal scalability.
+
+          * Hadoop 1.x is not suitable for real time data processing.
+          
+          * In hadoop 1.x only one namenode is used.  If the name node fails then the entire cluster fails and
+            this is called Single Point of failure(SPOF) in hadoop 1.x.         
+
+      Hadoop 2.x overcomes limitation of hadoop 1.x by:
+          
+          * Hadoop 2.x uses a new YARN component.
+
+          * Hadoop 2.x supports the horizontal scalability.
+
+          * It supports multiple name space and multiple namenodes.
+            and an application master component 
+          
+          * It decouples the responsibility of the mapreduce components into different components.
+
+          * It provides high availability and high scalability. 
+
+          * Hadoop 2.x has and an application master component, resource manager component, node manager 
+            component which makes it more useful.  
